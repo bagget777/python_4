@@ -17,11 +17,26 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("",include('posts.urls')),
+    path("", include('posts.urls')),
     path('users/', include('users.urls')),
+    path("", include('grazy.urls')),
+    path('posts/', include('posts.urls')),
+    path("", include('posts.urls'))
 ]
+# myproject/urls.py
+
+# from django.contrib import admin
+# from django.urls import path, include
+
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('posts/', include('posts.urls')),  # Include the 'posts' app URLs with a prefix of 'posts/'
+#     # Other URL patterns for your project go here...
+# ]
+
+
+
 
 
